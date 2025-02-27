@@ -18,7 +18,7 @@ $(function () {
             width: 750,
             height: 578,
             backgroundColor: null,
-            scale: 2,
+            scale: 4,
             useCORS: true
         }).then(function (canvas) {
             var name = 'capa-rentrelease' + mes.toLowerCase().replace(" ", "-");
