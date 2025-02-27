@@ -13,13 +13,12 @@ $(function () {
     });
 
     function gerarImagem(mes) {
-        window.devicePixelRatio = 2;
+        window.devicePixelRatio = 1;
         html2canvas(document.querySelector('.capa'),{
             width: 750,
             height: 578,
             backgroundColor: null,
-            scale: 4,
-            useCORS: true
+            scale: 5
         }).then(function (canvas) {
             var name = 'capa-rentrelease' + mes.toLowerCase().replace(" ", "-");
             let xhr = new XMLHttpRequest();
