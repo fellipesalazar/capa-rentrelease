@@ -1,0 +1,224 @@
+.main {
+    padding: 48px 24px;
+
+    .title {
+        margin-bottom: 56px;
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+
+        @include md {
+            flex-direction: column;
+            text-align: center;
+            padding: 0 32px;
+        }
+
+        .icon {
+            width: 64px;
+            height: 64px;
+            background-color: $color-primary-50;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            & img {
+                width: 36px;
+            }
+        }
+
+        h1 {
+            font: $font-h-m;
+            color: $color-neutral-900;
+        }
+    }
+
+    .content {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 24px;
+        border-radius: 16px;
+        border: 1px solid $color-neutral-200;
+        margin-bottom: 40px;
+
+        @include md {
+            flex-direction: column;
+        }
+
+        .profile {
+            width: 192px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            @include sm {
+                width: 100%;
+            }
+
+            .foto {
+                width: 192px;
+                height: 192px;
+                border-radius: 8px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                @include sm {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                }
+
+                .delete {
+                    position: absolute;
+                    padding: 8px;
+                    bottom: 0;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    background-color: rgba($color: #000, $alpha: .5);
+                    backdrop-filter: blur(8px);
+                    color: $color-neutral-0;
+                    cursor: pointer;
+                    font: $font-text-p;
+                    pointer-events: none;
+                    opacity: 0;
+
+                    &.active {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+
+                    .icon {
+                        color: $color-neutral-0;
+                        font-size: 20px;
+                    }
+                }
+
+                img {
+                    max-width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .form {
+            width: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .row {
+                width: inherit;
+                display: flex;
+                align-items: flex-start;
+                gap: 24px;
+
+                @include md {
+                    flex-direction: column;
+                }
+
+                .input {
+                    width: 100%;
+                    height: 56px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    label {
+                        color: $color-neutral-400;
+                        pointer-events: none;
+                        transition: .16s linear;
+                    }
+
+                    input {
+                        position: absolute;
+                        inset: 0;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 2px solid $color-neutral-200;
+                        transition: .16s linear;
+                        font-weight: 600;
+                        color: $color-neutral-900;
+
+                        &:-webkit-autofill {
+                            -webkit-box-shadow: 0 0 0 56px white inset;
+                        }
+
+                        &::placeholder {
+                            opacity: 0%;
+                        }
+
+                        &:valid,
+                        &:focus,
+                        &:not(:placeholder-shown) {
+                            inset: 16px 0 0;
+
+                            +label {
+                                font: $font-text-sm;
+                                position: absolute;
+                                top: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.preview {
+            background-color: $color-neutral-0;
+            border: 1px solid $color-neutral-200;
+        }
+
+        .sign-container {
+            width: 100%;
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .capa {
+                width: 100%;
+                height: 578.46px;
+                background: url("../../assets/img/fundo-rentrelease.png");
+                background-size: cover;
+                background-position: center;
+                position: relative;
+
+                .infos {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    position: absolute;
+                    top: 344px;
+                    right: 130px;
+
+                    .divider {
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 2px;
+                        background-color: #F7A70A;
+                    }
+
+                    .mes, .edicao {
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: black;
+                    }
+
+                    .edicao {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

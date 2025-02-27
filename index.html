@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Capa do RentRelease</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@400" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/js/html2canvas.min.js"></script>
+    <script defer src="./src/js/script.js"></script>
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="inner-container">
+            <div class="title">
+                <div class="icon">
+                    <img src="./assets/img/full_coverage.svg" alt="Icone">
+                </div>
+                <div>
+                    <h1>Gerador de capa do RentRelease</h1>
+                    <h5>Preencha os dados abaixo para gerar a capa do RentRelease.</h5>
+                </div>
+            </div>
+            <section class="content dados">
+                <form class="form">
+                    <div class="row">
+                        <div class="input">
+                            <input type="number" id="edicao" placeholder="Edição" min="0" step="1" required>
+                            <label for="edicao">Edição</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="mes" placeholder="Mês (Ex.: Março de 2025)" required>
+                            <label for="mes">Mês (Ex.: Março de 2025)</label>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <div class="content preview">
+                <div class="sign-container">
+                    <div class="capa">
+                        <div class="infos">
+                            <div class="edicao">Edição 10</div>
+                            <div class="divider"></div>
+                            <div class="mes">Fevereiro de 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="baixar btn primary lg">
+                <div class="text">Baixar capa</div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
